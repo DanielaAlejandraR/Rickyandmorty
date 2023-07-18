@@ -1,0 +1,39 @@
+.container{
+    background-color: rgba(0, 0, 0, 0.682);
+    border-radius: 30px;
+    box-shadow: 13px 35px 25px -9px rgba(0,0,0,0.7);   
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 40px;
+    width:900px;
+    height: 500px;
+    position:fixed;
+    top:200px;
+    right:500px;
+}
+
+.cardImage{
+    border-radius: 30px;
+    position:fixed;
+    top:350px;
+    right:600px;  
+ }
+
+ .homeButton{
+    background-color: rgb(167, 136, 230);
+    color: rgb(236, 208, 206);
+    width: 80px;
+    height: 33px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    position:fixed;
+    top:270px;
+    right:1305px;
+  }
+
+  .text{
+    position:fixed;
+    top:370px;
+    right:1000px;
+  }

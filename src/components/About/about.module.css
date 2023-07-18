@@ -1,0 +1,11 @@
+.container{
+    background-color: rgba(179, 133, 212, 0.712);
+    height: 500px;
+    width: 1100px;
+    padding: 20px 20px 20px 30px;
+    border: 2px dotted rgb(55, 16, 213);
+    margin: 60px 60px 20px 500px;
+    font-size: 180%;
+    text-align: center;
+    
+}

@@ -1,0 +1,40 @@
+.container {
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    padding-top: 15px;
+    background-color:rgba(158, 74, 210, 0.184);
+    width: 100vw;
+    height: 70px;
+  }
+  
+.Input {
+    padding: 18px;
+    margin-top: 10px;
+    font-size: 19px;
+    font-family: 'Creepster', cursive;
+    font-family: 'Ysabeau Infant', sans-serif;
+    color: rgb(244, 244, 223);
+    background-color:rgba(6, 7, 2, 0.655);
+    font-weight: bolder;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position:fixed;
+    top:80px;
+    right:150px;
+}
+
+  .searchButton {
+    background-color: rgb(236, 236, 15);
+    color: purple;
+    border-radius: 0px 15px 15px 0px;
+    font-weight: bolder;
+    font-size: 19px;
+    padding: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    position:fixed;
+    top:80px;
+    right:100px;
+    
+  }
