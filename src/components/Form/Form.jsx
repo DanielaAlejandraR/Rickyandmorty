@@ -1,41 +1,44 @@
 import {useState} from "react";
-import validation from "../Validation/validation";
+import {validate} from "./validation";
 
 const Form = ({ login}) => {
-    const[errors, setErrors] = useState ({});
+    const[errors, setErrors] = useState ({
+        email:"",
+        password: "",  
+    });
 
     const[userData, setUserData] = useState({
         email:"",
         password: "",  
     });
 
-    const handleChange = (event) =>{
-            setUserData({
-                ...userData,
-                [event.target.name]: event.target.value
-            })
-
-            setErrors(validation({
-                ...userData,
-                [event.target.name]: event.target.value
-            }))
-            }
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const handleSubmit = (evento) => {
+        evento.preventDefault();
         login(userData);
+    }
+    const handleInputChange = (evento) => {
+        setUserData({
+            ...userData,
+            [evento.target.name] : evento.target.value
+        })
+        setErrors(validate(
+            {...userData, 
+            [evento.target.name] : evento.target.value
+            }))
     }
 
     return(
         <div>  
             <form onSubmit={handleSubmit}>
-            
+            <h1>Welcome! Fill your credentials to start</h1>
+
             <label htmlFor="email">Email: </label>
             <input 
                 type="email" 
-                name="email" 
+                name="email"
+                placeholder="Enter your email" 
                 value={userData.email} 
-                onChange={handleChange}></input>
+                onChange={handleInputChange}></input>
 
             {errors.email && <p>{errors.email}</p>}
             <br/>
@@ -44,8 +47,9 @@ const Form = ({ login}) => {
             <input 
                 type="password" 
                 name="password" 
+                placeholder="Enter your password" 
                 value={userData.password} 
-                onChange={handleChange}></input>
+                onChange={handleInputChange}></input>
 
             {errors.password && <p>{errors.password}</p>}
             <br/>

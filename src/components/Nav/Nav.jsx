@@ -12,6 +12,9 @@ const  Nav = ({onSearch, random}) => {
                  <Link to="/home">Home</Link></button>    
             <button className={style.Button}>
                 <Link to ="/about">About</Link> </button>   
+            <button className={style.Button}>
+                <Link to ="/favorites">Favorites</Link> </button>   
+            
 
             <button onClick={random}>ADD RANDOM</button>
 
