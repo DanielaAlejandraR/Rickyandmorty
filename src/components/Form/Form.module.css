@@ -1,0 +1,11 @@
+.container{
+    margin-top: 190px;
+    padding:40px;
+    background:#ab4ed07b;
+    border-radius:30px;
+    text-align:center;
+    font-size:large;
+    font-weight: bolder;
+    width: 30%;
+    margin-left: 37%;
+}

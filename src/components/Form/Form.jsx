@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {validate} from "./validation";
+import style from './Form.module.css'
 
 const Form = ({ login}) => {
     const[errors, setErrors] = useState ({
@@ -29,8 +30,11 @@ const Form = ({ login}) => {
 
     return(
         <div>  
-            <form onSubmit={handleSubmit}>
-            <h1>Welcome! Fill your credentials to start</h1>
+            <form onSubmit={handleSubmit} className={style.container}>
+            <h1>Welcome!
+             <br/>
+             <br/>
+                Fill your credentials to start</h1> 
 
             <label htmlFor="email">Email: </label>
             <input 

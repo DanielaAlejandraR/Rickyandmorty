@@ -35,3 +35,8 @@ h2 {
   color: beige;
   font-weight: bold;
 }
+
+.btnFav {
+  background-color: transparent;
+  border-color: transparent;
+}

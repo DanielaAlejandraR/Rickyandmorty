@@ -4,19 +4,22 @@ import Nav from "./components/Nav/Nav.jsx";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import Detail from "./components/detail/detail.jsx";
 import About from "./components/About/about.jsx";
-//import SearchBar from "./components/SearchBar/SearchBar.jsx";
+import Detail from "./components/detail/detail.jsx";
 import Form from "./components/Form/Form";
+import ErrorPage from "./components/Error/errorPage";
+import Favorites from "./components/Favorites/favorites";
 
-const email = "ale@gmail.com";
-const password = "123abcd";
 
 function App() {
+  const[ characters, setCharacters ]= useState([]);
+  const[ access, setAccess] = useState(false);
+
+  const email = "ale@gmail.com";
+  const password = "123abcd";
+  
   const location = useLocation();
   const navigate = useNavigate();
-  const[ characters, setCharacters ]= useState([]);
-  const[access, setAccess] = useState(false);
 
   const login =(userData) =>{
     if(userData.email === email && userData.password === password){
@@ -29,7 +32,8 @@ function App() {
       !access && navigate('/');
   }, [access]);
 
-  const onSearch= (id)  =>{
+  
+  function onSearch(id) {
     axios(`https://rickandmortyapi.com/api/character/${id}`)
       .then(({ data }) => {
           const characterFind = characters.find((char) => char.id === Number(id))
@@ -53,13 +57,36 @@ function App() {
 
    const onClose = (id) => {
     const charactersFiltered = characters.filter(character => character.id !== Number(id))
-    setCharacters(charactersFiltered)
+    setCharacters(charactersFiltered);
    }
   
+   function randomHandler(){
+    let haveIt= [];
+    let random = (Math.random()* 826).toFixed();
+    random = Number(random);
+
+    if(!haveIt.includes(random)){
+      haveIt.push(random);
+    fetch(`https://rickandmortyapi.com/api/character/${random}`)
+      .then((response) =>  response.json())
+      .then((data) => {
+        if(data.name){
+          setCharacters((oldChars) => [...oldChars, data]);
+        }else{
+          window.alert("No hay personaes con ese ID");
+        }
+      });
+    }else{
+      console.log("Ya agregaste todos los personajes");
+      return false;
+    }
+   }
+  
+
   return (
     <div className="App">
       {
-        location.pathname !== "/" && <Nav onSearch ={onSearch} />
+        location.pathname !== "/" && <Nav onSearch ={onSearch} random={randomHandler} />
       }
 
       <Routes>
@@ -77,6 +104,13 @@ function App() {
       <Route 
         path ="/detail/:id" 
         element={<Detail/>}/>
+      <Route 
+        path ="/favorites" 
+        element={<Favorites/>}/>     
+
+      <Route 
+        path ="*" 
+        element={<ErrorPage/>}/>
   
       </Routes>
      </div>

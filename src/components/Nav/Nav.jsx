@@ -5,20 +5,16 @@ import style from "./Nav.module.css"
 const  Nav = ({onSearch, random}) => {
 
     return (
-        <div>
-            <SearchBar onSearch={onSearch}/>  
-
-            <button className={style.Button}> 
-                 <Link to="/home">Home</Link></button>    
-            <button className={style.Button}>
-                <Link to ="/about">About</Link> </button>   
-            <button className={style.Button}>
-                <Link to ="/favorites">Favorites</Link> </button>   
+        <div className={style.container}>
+        <SearchBar onSearch= {onSearch}/>
+        <Link to="/home"  className={style.link}> Home </Link> 
+        <Link to="/about" className={style.link}> About </Link> 
+        <Link to='/favorites' className={style.link}>Favorites</Link>
             
 
-            <button onClick={random}>ADD RANDOM</button>
+         <button onClick={random} className={style.link}>ADD RANDOM</button>
 
-             <img className={style.img} src='https://1.bp.blogspot.com/-AvVxtmDEbCw/YRQjDiXFhCI/AAAAAAABAR8/lNQZ_fg-C9UXdoNkqJ3uVOwANlu7S_ZAACLcBGAsYHQ/s3200/tipografia-rick-y-morty.jpg' width='20%'/>
+        <img className={style.img} src='https://1.bp.blogspot.com/-AvVxtmDEbCw/YRQjDiXFhCI/AAAAAAABAR8/lNQZ_fg-C9UXdoNkqJ3uVOwANlu7S_ZAACLcBGAsYHQ/s3200/tipografia-rick-y-morty.jpg' width='20%'/>
 
             
         </div>

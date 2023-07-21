@@ -29,8 +29,17 @@ useEffect(() => {
 
    return (
      <div className={style.container}>
+         
+        
         <img src ={image} alt={name} className={style.cardImage} /> 
         
+        {
+          isFav ? (
+              <button onClick={handleFavorite} className={style.btnFav}>❤️</button>
+          ) : (
+              <button onClick={handleFavorite} className={style.btnFav}>🤍</button>
+          )
+        }
 
         <Link to={`/detail/${id}`}>
             <h2> {name} </h2>
@@ -43,13 +52,7 @@ useEffect(() => {
          <h2>Gender: {gender}</h2>
        </div>
 
-        {
-          isFav ? (
-              <button onClick={handleFavorite} className={style.btnFav}>❤️</button>
-          ) : (
-              <button onClick={handleFavorite} className={style.btnFav}>🤍</button>
-          )
-        }
+      
 
         {
           !pathname.includes('/favorites') &&
