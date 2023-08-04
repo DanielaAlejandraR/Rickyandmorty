@@ -21,8 +21,14 @@ export default function SearchBar(props) {
 
 
   return (
+    
     <div className={style.container}>
   
+   <img 
+   className={style.img} 
+   src='https://1.bp.blogspot.com/-AvVxtmDEbCw/YRQjDiXFhCI/AAAAAAABAR8/lNQZ_fg-C9UXdoNkqJ3uVOwANlu7S_ZAACLcBGAsYHQ/s3200/tipografia-rick-y-morty.jpg' 
+   width='20%'/>
+   
  { 
     !pathname.includes('/detail') &&
     !pathname.includes('/about') &&
@@ -39,7 +45,7 @@ export default function SearchBar(props) {
        />
       <button onClick={()=> onSearch(id) } className={style.searchButton}>Add</button>
     </div>
-     }
-     </div>
+   }
+   </div>
      );
   }

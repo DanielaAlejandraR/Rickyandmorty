@@ -1,18 +1,16 @@
 .container {
+  position: relative; 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-top: 5px;
-  margin-left: 5%;
-  border-radius: 5px;
-  background-color:rgba(37, 4, 57, 0.184);
   }
 
   .containerInput {
     margin-left: 5%;
 }
 
-.Input {
-  padding: 6px;
+/* .Input {
+  padding: 80px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
@@ -23,7 +21,7 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 
-}
+} */
 
   .searchButton {
     background-color: rgb(236, 236, 15);
@@ -42,3 +40,15 @@
     border-bottom-right-radius: 20px;
 
   }
+
+  .img {
+    filter: hue-rotate(100deg);
+    height: 170px;
+    width: 500px;
+    border-radius: 50px;
+    position: absolute; 
+    top: -200px;
+    right: 90%; 
+    z-index: 2; 
+    
+}

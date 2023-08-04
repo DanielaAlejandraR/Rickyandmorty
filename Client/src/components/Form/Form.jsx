@@ -31,13 +31,18 @@ const Form = ({ login}) => {
     return(
         <div>  
             <form onSubmit={handleSubmit} className={style.container}>
-            <h1>Welcome!
+            <h1 >Welcome!
              <br/>
              <br/>
                 Fill your credentials to start</h1> 
+            <br/>
+            <br/>
 
-            <label htmlFor="email">Email: </label>
-            <input 
+            <label className={style.title} htmlFor="email">Email</label>
+            <br/>
+            <br/>
+
+            <input className={style.inputs}
                 type="email" 
                 name="email"
                 placeholder="Enter your email" 
@@ -46,9 +51,11 @@ const Form = ({ login}) => {
 
             {errors.email && <p>{errors.email}</p>}
             <br/>
-
-            <label htmlFor="password">Password</label>
-            <input 
+            <br/>
+            <label className={style.title} htmlFor="password">Password </label>
+            <br/>
+            <br/>
+            <input className={style.inputs}
                 type="password" 
                 name="password" 
                 placeholder="Enter your password" 
@@ -57,7 +64,9 @@ const Form = ({ login}) => {
 
             {errors.password && <p>{errors.password}</p>}
             <br/>
-            <button type="submit">Log in</button>
+            <br/>
+            <br/>
+            <button className={style.btn} type="submit">Log in</button>
             </form>          
         </div> 
     )

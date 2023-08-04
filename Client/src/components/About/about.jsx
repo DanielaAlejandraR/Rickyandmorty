@@ -6,7 +6,7 @@ const About = () => {
             <h1>¡Hola! Bienvenido a mi página </h1>
             <br/>
             <p>    Mi nombre es Alejandra Riaño, soy de Colombia. </p>
-            Estoy aprendiendo React en Henry
+            Estoy aprendiendo a programar
         </div>
     );
 }
