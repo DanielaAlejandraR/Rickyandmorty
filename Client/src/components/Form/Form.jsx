@@ -31,29 +31,28 @@ const Form = ({ login}) => {
     return(
         <div>  
             <form onSubmit={handleSubmit} className={style.container}>
-            <h1 >Welcome!
+            <h1 className={style.title1} >Welcome!
              <br/>
              <br/>
                 Fill your credentials to start</h1> 
             <br/>
             <br/>
-
+            <div className={style.container2}>
             <label className={style.title} htmlFor="email">Email</label>
             <br/>
-            <br/>
-
+            
             <input className={style.inputs}
                 type="email" 
                 name="email"
                 placeholder="Enter your email" 
                 value={userData.email} 
                 onChange={handleInputChange}></input>
-
-            {errors.email && <p>{errors.email}</p>}
+            
+            {errors.email && <p className={style.title2}>{errors.email}</p>}
             <br/>
             <br/>
+            
             <label className={style.title} htmlFor="password">Password </label>
-            <br/>
             <br/>
             <input className={style.inputs}
                 type="password" 
@@ -61,12 +60,13 @@ const Form = ({ login}) => {
                 placeholder="Enter your password" 
                 value={userData.password} 
                 onChange={handleInputChange}></input>
+          
 
-            {errors.password && <p>{errors.password}</p>}
-            <br/>
+            {errors.password && <p className={style.title2}>{errors.password}</p>}
             <br/>
             <br/>
             <button className={style.btn} type="submit">Log in</button>
+            </div> 
             </form>          
         </div> 
     )

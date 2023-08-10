@@ -1,19 +1,14 @@
 .container{
     position:fixed;
-    top: 15%;
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    top: 0%;
     background-color: rgba(0, 0, 0, 0.1);
-    padding: 10px; 
     border-radius: 20px;
-    right: 30%; 
+    width: 80%;
 }
 
 .navBottom {
     display: flex;
-    gap: 20px;
+    
 }
 
 .link{
@@ -23,12 +18,10 @@
     font-weight: bolder;
     font-size: 25px;
     cursor: pointer;
-    width: 220px;
-    height: 20%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
-    margin-top: 50px;
 }
    
 .link:hover{

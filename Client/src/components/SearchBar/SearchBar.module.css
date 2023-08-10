@@ -1,37 +1,7 @@
-.container {
-  position: relative; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  }
-
-  .containerInput {
-    margin-left: 5%;
-}
-
-/* .Input {
-  padding: 80px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-  font-family: 'Creepster', cursive;
-  font-family: 'Ysabeau Infant', sans-serif;
-  color: white;
-  font-weight: bolder;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-
-} */
-
-  .searchButton {
+ .searchButton {
     background-color: rgb(236, 236, 15);
     color: purple;
-    font-family: 'Creepster', cursive;
     font-family: 'Ysabeau Infant', sans-serif;
-    float: right;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 15px;
     font-size: 17px;
     border: none;
     cursor: pointer;
@@ -46,9 +16,21 @@
     height: 170px;
     width: 500px;
     border-radius: 50px;
-    position: absolute; 
-    top: -200px;
-    right: 90%; 
-    z-index: 2; 
-    
+}
+
+.container{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+#container > {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
 }

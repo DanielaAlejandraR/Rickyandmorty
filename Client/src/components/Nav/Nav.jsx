@@ -9,12 +9,12 @@ const  Nav = ({onSearch, random}) => {
             <div className={style.navTop}>
                 <SearchBar onSearch={onSearch} />
             </div>
-            <div className={style.navBottom}>
+            <nav className={style.navBottom}>
                 <Link to="/home" className={style.link}>Home</Link>
                 <Link to="/about" className={style.link}>About</Link>
                 <Link to='/favorites' className={style.link}>Favorites</Link>
                 <button onClick={random} className={style.link}>ADD RANDOM</button>
-            </div>
+            </nav>
         </div>
     )
 }

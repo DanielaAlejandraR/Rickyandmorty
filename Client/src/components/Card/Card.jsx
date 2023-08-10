@@ -52,8 +52,7 @@ useEffect(() => {
          <h2>Gender: {gender}</h2>
        </div>
 
-      
-
+    
         {
           !pathname.includes('/favorites') &&
          <button onClick={() => onClose(id)}
@@ -76,7 +75,5 @@ const mapDispatchToProps = (dispatch) => {
     deleteFavorite: (id) => dispatch((deleteFavorite(id)))
   }
 }
-
-
 
 export default connect(mapsStateToProps, mapDispatchToProps)(Card)
